@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/products.dart';
 import 'package:provider/provider.dart';
 import 'cart.dart';
+import 'package:shopping_app/widgets/widget.dart';
 
 class DetailPage extends StatelessWidget {
   static const routeName = '/product-detail';
@@ -12,9 +13,7 @@ class DetailPage extends StatelessWidget {
     final loadedPdt = Provider.of<Products>(context).findById(productId);
     final cart = Provider.of<Cart>(context);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(loadedPdt.name),
-      ),
+      appBar: appBarMain(context),
       body: new ListView(
         children: <Widget>[
           new Container(
@@ -255,7 +254,7 @@ class DetailPage extends StatelessWidget {
       ),
         floatingActionButton: FloatingActionButton(
         onPressed: () {
-          cart.addItem(productId, loadedPdt.name, loadedPdt.price);
+          cart.addItem(productId, loadedPdt.name, loadedPdt.price, loadedPdt.size , loadedPdt.color);
     },
              child: Icon(
             Icons.shopping_cart,

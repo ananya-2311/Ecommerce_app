@@ -4,13 +4,19 @@ class CartItem {
   final String id;
   final String name;
   final int quantity;
-  final double price;
+  final int price;
+  final String picture;
+  final String size;
+  final String color;
 
   CartItem(
       {@required this.id,
         @required this.name,
         @required this.quantity,
-        @required this.price});
+        @required this.price,
+        @required this.picture,
+      @required this.size,
+      @required this.color});
 }
 
 class Cart with ChangeNotifier {
@@ -24,7 +30,7 @@ class Cart with ChangeNotifier {
     return _items.length;
   }
 
-  void addItem(String pdtid, String name, double price) {
+  void addItem(String pdtid, String name, int price, String size, String color) {
     if (_items.containsKey(pdtid)) {
       _items.update(
           pdtid,
@@ -32,7 +38,9 @@ class Cart with ChangeNotifier {
               id: DateTime.now().toString(),
               name: existingCartItem.name,
               quantity: existingCartItem.quantity + 1,
-              price: existingCartItem.price));
+              price: existingCartItem.price,
+              size: existingCartItem.size,
+              color: existingCartItem.color));
     } else {
       _items.putIfAbsent(
           pdtid,
@@ -60,15 +68,18 @@ class Cart with ChangeNotifier {
           id,
               (existingCartItem) => CartItem(
               id: DateTime.now().toString(),
-              name: existingCartItem.name,
-              quantity: existingCartItem.quantity - 1,
-              price: existingCartItem.price));
+                  name: existingCartItem.name,
+                  quantity: existingCartItem.quantity - 1,
+                  picture: existingCartItem.picture,
+                  price: existingCartItem.price,
+                  size: existingCartItem.size,
+                  color: existingCartItem.color));
     }
     notifyListeners();
   }
 
-  double get totalAmount {
-    var total = 0.0;
+  int get totalAmount {
+    var total = 0;
     _items.forEach((key, cartItem) {
       total += cartItem.price * cartItem.quantity;
     });

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/pages/chatscreen.dart';
+import 'package:shopping_app/widgets/widget.dart';
 import 'orders.dart';
 import 'package:provider/provider.dart';
 import 'cart.dart';
@@ -11,11 +13,19 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'My Cart',
-          style: TextStyle(fontSize: 30, color: Theme.of(context).accentColor),
-        ),
+      appBar:AppBar(
+
+        backgroundColor: Colors.pink,
+        title: Text('Shopyyy'),
+        actions: <Widget>[
+          new IconButton(icon: Icon(Icons.search, color: Colors.white),
+              onPressed: () {}),
+          new IconButton(icon: Icon(Icons.voice_chat, color: Colors.white),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> new Chatscreen()));
+              }),
+
+        ],
       ),
       body: Column(
         children: <Widget>[
@@ -27,7 +37,11 @@ class CartScreen extends StatelessWidget {
                     cart.items.keys.toList()[i],
                     cart.items.values.toList()[i].price,
                     cart.items.values.toList()[i].quantity,
-                    cart.items.values.toList()[i].name)),
+                    cart.items.values.toList()[i].name,
+                    cart.items.values.toList()[i].picture,
+                    cart.items.values.toList()[i].size,
+                    cart.items.values.toList()[i].color)
+            ),
           ),
           CheckoutButton(
             cart: cart,

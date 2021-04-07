@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:provider/provider.dart';
 
 class Product with ChangeNotifier {
   final String id;
@@ -7,9 +8,8 @@ class Product with ChangeNotifier {
   final String description;
   final String size;
   final String color;
-  final String quantity;
-  final double price;
-  final double old_price;
+  final int price;
+  final int old_price;
 
 
   Product(
@@ -20,7 +20,6 @@ class Product with ChangeNotifier {
         @required this.size,
         @required this.price,
         @required this.color,
-        @required this.quantity,
         @required this.old_price,
         });
 }
@@ -32,62 +31,61 @@ class Products with ChangeNotifier {
       name: "Red Dress",
       picture: "images/products/red_dress.jpg",
       description: "Fashion depends on person to person. It differs based on the place, community, and, most importantly, time. The concept of Fashion is always at flux. The trends and ideas keep changing from time to time. The glamour industry, all across the world, and specifically in India, is centered around Fashion.",
-      old_price: 1199,
-      price: 999,
+      old_price:1199,
+      price:999,
       size: "M",
       color: "Red",
-      quantity: "1",
     ),
     Product(
       id: '2',
       name: "Black Blazer",
       picture: "images/products/blazer_black.jpg",
-      old_price: 2499,
-      price: 1499,
+      description: "Fashion depends on person to person. It differs based on the place, community, and, most importantly, time. The concept of Fashion is always at flux. The trends and ideas keep changing from time to time. The glamour industry, all across the world, and specifically in India, is centered around Fashion.",
+      old_price:1299,
+      price: 999,
       size: "L",
       color: "Black",
-      quantity: "1",
 
     ),
     Product(
       id: '3',
       name: "Blue Top",
+      description: "Fashion depends on person to person. It differs based on the place, community, and, most importantly, time. The concept of Fashion is always at flux. The trends and ideas keep changing from time to time. The glamour industry, all across the world, and specifically in India, is centered around Fashion.",
       picture: "images/products/blue_top.jpeg",
       old_price: 1299,
       price: 799,
       size: "M",
       color: "Blue",
-      quantity: "1",
     ),
     Product(
       id: '4',
       name: "Party Frock",
       picture: "images/products/girl_frock.jpg",
+      description: "Fashion depends on person to person. It differs based on the place, community, and, most importantly, time. The concept of Fashion is always at flux. The trends and ideas keep changing from time to time. The glamour industry, all across the world, and specifically in India, is centered around Fashion.",
       old_price: 2299,
       price: 1299,
       size: "S",
       color: "Peach",
-      quantity: "1",
     ),
     Product(
       id: '5',
       name: "Black Heels",
       picture: "images/products/product_heels.jpg",
+      description: "Fashion depends on person to person. It differs based on the place, community, and, most importantly, time. The concept of Fashion is always at flux. The trends and ideas keep changing from time to time. The glamour industry, all across the world, and specifically in India, is centered around Fashion.",
       old_price: 1599,
       price: 999,
       size: "8",
       color: "Black",
-      quantity: "1",
     ),
     Product(
       id: '6',
       name: "Handbag",
       picture: "images/products/handbag.jpg",
+      description: "Fashion depends on person to person. It differs based on the place, community, and, most importantly, time. The concept of Fashion is always at flux. The trends and ideas keep changing from time to time. The glamour industry, all across the world, and specifically in India, is centered around Fashion.",
       old_price: 1999,
       price: 999,
       size: "L",
       color: "Brown",
-      quantity: "1",
     ),
   ];
 

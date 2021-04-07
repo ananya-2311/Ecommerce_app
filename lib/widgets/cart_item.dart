@@ -5,11 +5,14 @@ import 'cart.dart';
 class CartPdt extends StatelessWidget {
   final String id;
   final String productId;
-  final double price;
+  final int price;
   final int quantity;
   final String name;
+  final String picture;
+  final String size;
+  final String color;
 
-  CartPdt(this.id, this.productId, this.price, this.quantity, this.name);
+  CartPdt(this.id, this.productId, this.price, this.quantity, this.name, this.picture, this.size , this.color);
   @override
   Widget build(BuildContext context) {
     return Dismissible(
@@ -21,16 +24,20 @@ class CartPdt extends StatelessWidget {
       onDismissed: (direction) {
         Provider.of<Cart>(context, listen: false).removeItem(productId);
       },
-      child: Card(
-        child: ListTile(
-          leading: CircleAvatar(
-            child: FittedBox(child: Text('\$$price')),
+      child: Container(
+        height: 100,
+        child: Card(
+          child: ListTile(
+            leading: CircleAvatar(
+              child: FittedBox(child: Text('\$$price')),
+            ),
+            title: Text(name),
+            subtitle: Text('Total: \Rs${(price * quantity)}'),
+            trailing: Text('$quantity x'),
           ),
-          title: Text(name),
-          subtitle: Text('Total: \$${(price * quantity)}'),
-          trailing: Text('$quantity x'),
         ),
       ),
+
     );
   }
 }

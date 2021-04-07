@@ -7,8 +7,8 @@ import 'cart.dart';
 class PdtItem extends StatelessWidget {
   final String name;
   final String picture;
-  final double price;
-  final double old_price;
+  final int price;
+  final int old_price;
 
   PdtItem({this.name, this.picture, this.price, this.old_price});
   @override
@@ -17,6 +17,7 @@ class PdtItem extends StatelessWidget {
     final cart = Provider.of<Cart>(context);
     return GestureDetector(
       onTap: () {
+
         Navigator.of(context)
             .pushNamed(DetailPage.routeName, arguments: pdt.id);
       },
@@ -31,12 +32,14 @@ class PdtItem extends StatelessWidget {
               title: Text("\Rs$price", style: TextStyle(
                 color: Colors.red,
                 fontWeight: FontWeight.w800,
+                fontSize: 12,
               ),
               ),
               subtitle: Text(
                 "\Rs$old_price", style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.w800,
+                  fontSize: 12,
                   decoration: TextDecoration.lineThrough
               ),
               ),

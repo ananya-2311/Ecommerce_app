@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class OrderItem {
   final String id;
-  final double amount;
+  final int amount;
   final List<CartItem> products;
   final DateTime dateTime;
 
@@ -25,7 +25,7 @@ class Orders with ChangeNotifier {
     return [..._orders];
   }
 
-  Future<void> addOrder(List<CartItem> cartProducts, double total) async {
+  Future<void> addOrder(List<CartItem> cartProducts, int total) async {
     final url = 'https://shopping-app-686b7-default-rtdb.firebaseio.com/orders.json';
     final timeStamp = DateTime.now();
     try {

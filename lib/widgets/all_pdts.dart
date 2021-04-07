@@ -6,8 +6,9 @@ import './pdt_item.dart';
 class AllProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final productData=Provider.of<Products>(context);
-    final pdts=productData.items;
+
+    final productData = Provider.of<Products>(context);
+    final pdts= productData.items;
     return GridView.builder(
       physics: ScrollPhysics(),
       shrinkWrap: true,

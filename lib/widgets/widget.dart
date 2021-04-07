@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/pages/cart.dart';
+import 'package:shopping_app/widgets/cart.dart';
 import 'package:shopping_app/pages/chatscreen.dart';
+import 'package:shopping_app/widgets/cart_screen.dart';
+
 Widget appBarMain(BuildContext context){
   // ignore: dead_code
   return AppBar(
@@ -12,7 +14,7 @@ Widget appBarMain(BuildContext context){
           onPressed: () {}),
       new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> new Cart()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> new CartScreen()));
           }),
       new IconButton(icon: Icon(Icons.voice_chat, color: Colors.white),
           onPressed: () {
@@ -69,7 +71,7 @@ Widget Drawermain(BuildContext context){
             ),
           ),
           InkWell(
-            onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> new Cart()));},
+            onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> new CartScreen()));},
             child: ListTile(
               title: Text('Shopping cart'),
               leading: Icon(Icons.shopping_cart, color: Colors.black,),

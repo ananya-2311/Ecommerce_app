@@ -4,6 +4,8 @@ import 'package:shopping_app/components/horizontal_list.dart';
 import 'package:shopping_app/components/products.dart';
 import 'package:shopping_app/widgets/widget.dart';
 import 'package:shopping_app/pages/chatscreen.dart';
+import 'package:shopping_app/widgets/all_pdts.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -54,9 +56,10 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 18
                   )),
             ),
+
             Container(
               height: 320.0,
-              child: Products(),
+              child: AllProducts(),
             )
           ]
       ),
