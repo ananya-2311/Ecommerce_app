@@ -10,6 +10,7 @@ class Product with ChangeNotifier {
   final String color;
   final int price;
   final int old_price;
+  final String Url;
 
 
   Product(
@@ -21,6 +22,8 @@ class Product with ChangeNotifier {
         @required this.price,
         @required this.color,
         @required this.old_price,
+        @required this.Url,
+
         });
 }
 
@@ -35,6 +38,7 @@ class Products with ChangeNotifier {
       price:999,
       size: "M",
       color: "Red",
+      Url: "https://shopping_app.com/red_dress"
     ),
     Product(
       id: '2',
@@ -45,6 +49,7 @@ class Products with ChangeNotifier {
       price: 999,
       size: "L",
       color: "Black",
+        Url: "https://shopping_app.com/black_blazer"
 
     ),
     Product(
@@ -56,6 +61,7 @@ class Products with ChangeNotifier {
       price: 799,
       size: "M",
       color: "Blue",
+        Url: "https://shopping_app.com/blue_top"
     ),
     Product(
       id: '4',
@@ -66,6 +72,7 @@ class Products with ChangeNotifier {
       price: 1299,
       size: "S",
       color: "Peach",
+        Url: "https://shopping_app.com/party_frock"
     ),
     Product(
       id: '5',
@@ -76,6 +83,7 @@ class Products with ChangeNotifier {
       price: 999,
       size: "8",
       color: "Black",
+        Url: "https://shopping_app.com/black_heels"
     ),
     Product(
       id: '6',
@@ -86,6 +94,7 @@ class Products with ChangeNotifier {
       price: 999,
       size: "L",
       color: "Brown",
+        Url: "https://shopping_app.com/handbag"
     ),
   ];
 

@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/pages/chatscreen.dart';
-import '../models/products.dart';
-import 'package:provider/provider.dart';
-import 'cart.dart';
 import 'package:shopping_app/widgets/widget.dart';
-
-class DetailPage extends StatelessWidget {
+class RedDress extends StatelessWidget {
   static const routeName = '/product-detail';
 
   @override
   Widget build(BuildContext context) {
     final productId = ModalRoute.of(context).settings.arguments as String;
-    final loadedPdt = Provider.of<Products>(context).findById(productId);
-    final cart = Provider.of<Cart>(context);
     return Scaffold(
       appBar: appBarMain(context),
       body: new ListView(
@@ -23,12 +16,12 @@ class DetailPage extends StatelessWidget {
             child: GridTile(
               child:Container(
                 color: Colors.white,
-                child: Image.asset(loadedPdt.picture),
+                child: Image.asset('images/products/red_dress.jpg'),
               ),
               footer: new Container(
                 color: Colors.white70,
                 child: ListTile(
-                  leading: new Text(loadedPdt.name,
+                  leading: new Text("Red Dress",
                     style: TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 16.0,
                     ),),
@@ -36,14 +29,14 @@ class DetailPage extends StatelessWidget {
                   title: new Row(
                     children: <Widget>[
                       Expanded(
-                        child: new Text("\Rs${loadedPdt.old_price}",
+                        child: new Text("Rs 1199",
                             style: TextStyle(
                               color: Colors.black,
                               decoration: TextDecoration.lineThrough,
                             )),
                       ),
                       Expanded(
-                        child: new Text("\Rs${loadedPdt.price}",
+                        child: new Text("Rs 999",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
@@ -218,7 +211,7 @@ class DetailPage extends StatelessWidget {
                     color: Colors.black,
                   )),
               subtitle: new Text(
-                loadedPdt.description,
+                  "Fashion depends on person to person. It differs based on the place, community, and, most importantly, time. The concept of Fashion is always at flux. The trends and ideas keep changing from time to time. The glamour industry, all across the world, and specifically in India, is centered around Fashion.",
                   style: TextStyle(
                     color: Colors.black,
                   ))
@@ -230,7 +223,7 @@ class DetailPage extends StatelessWidget {
                 child: new Text("Product name", style: TextStyle(color: Colors.grey, fontSize: 16), ),
               ),
               Padding(padding: EdgeInsets.all(5.0),
-                  child: new Text(loadedPdt.name))
+                  child: new Text("Red Dress"))
             ],
           ),
           new Row(
@@ -249,13 +242,9 @@ class DetailPage extends StatelessWidget {
                   children: <Widget>[
                     new Text("Share this product:", style: TextStyle(color: Colors.grey, fontSize: 16),  ),
                     InkWell(
-                        child: new Text("${loadedPdt.Url}" , style: TextStyle(color: Colors.black, fontSize:10 ),),
-                            onTap:() { Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                            builder: (context) => Chatscreen()
-                            ));
-                            }),
+                        child: new Text("https://shopping_app.com/red_dress" , style: TextStyle(color: Colors.black, fontSize:10 ),),
+                        onTap:() {
+                        }),
                   ],
                 ),
 
@@ -266,15 +255,6 @@ class DetailPage extends StatelessWidget {
 
         ],
       ),
-        floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          cart.addItem(productId, loadedPdt.name, loadedPdt.price, loadedPdt.size , loadedPdt.color);
-    },
-             child: Icon(
-            Icons.shopping_cart,
-             size: 30,
-     ),
-    ),
 
     );
   }

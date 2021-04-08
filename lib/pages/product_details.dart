@@ -1,7 +1,6 @@
 import 'package:shopping_app/widgets/widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:shopping_app/pages/cart.dart';
 
 class ProductDetails extends StatefulWidget {
@@ -277,14 +276,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           TextSpan(
                               style: linkText,
                               text: "Click here",
-                              recognizer: TapGestureRecognizer()..onTap = () async{
-                                var url = "https://www.youtube.com/watch?v=urnrIW-eaX4 ";
-                                if(await canLaunch(url)){
-                                  await launch(url);
-                                }else(
-                                    throw "Cannot load url"
-                                );
-                              }
+                              recognizer: TapGestureRecognizer(),
 
                           )
 

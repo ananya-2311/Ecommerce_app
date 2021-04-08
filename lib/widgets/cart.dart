@@ -8,6 +8,7 @@ class CartItem {
   final String picture;
   final String size;
   final String color;
+  final String Url;
 
   CartItem(
       {@required this.id,
@@ -16,7 +17,8 @@ class CartItem {
         @required this.price,
         @required this.picture,
       @required this.size,
-      @required this.color});
+      @required this.color,
+        @required this.Url,});
 }
 
 class Cart with ChangeNotifier {
@@ -40,7 +42,8 @@ class Cart with ChangeNotifier {
               quantity: existingCartItem.quantity + 1,
               price: existingCartItem.price,
               size: existingCartItem.size,
-              color: existingCartItem.color));
+              color: existingCartItem.color,
+              Url: existingCartItem.Url));
     } else {
       _items.putIfAbsent(
           pdtid,

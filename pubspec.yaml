@@ -44,9 +44,9 @@ dependencies:
   mobx_codegen: ^0.3.3+1
   json_serializable: ^3.3.0
   carousel_pro: ^1.0.0
-  url_launcher: ^5.7.5
   provider: ^4.0.0
   http: ^0.12.1
+
   
 
 
