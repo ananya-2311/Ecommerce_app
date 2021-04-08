@@ -35,26 +35,15 @@ class _ChatscreenState extends State<Chatscreen> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'User Name',
-                      hintText: 'Enter Your Name',
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(15),
-                  child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
-                      hintText: 'Enter Password',
+                      labelText: 'Enter text',
+                      hintText: 'Enter text',
                     ),
                   ),
                 ),
                 RaisedButton(
                   textColor: Colors.white,
                   color: Colors.blue,
-                  child: Text('Sign In'),
+                  child: Text('Share'),
                   onPressed: (){
                     Navigator.pushReplacement(
                         context,

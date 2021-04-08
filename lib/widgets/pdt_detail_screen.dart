@@ -249,7 +249,7 @@ class DetailPage extends StatelessWidget {
                   children: <Widget>[
                     new Text("Share this product:", style: TextStyle(color: Colors.grey, fontSize: 16),  ),
                     InkWell(
-                        child: new Text("${loadedPdt.Url}" , style: TextStyle(color: Colors.black, fontSize:10 ),),
+                        child: new SelectableText("${loadedPdt.Url}" , style: TextStyle(color: Colors.black, fontSize:10 ),),
                             onTap:() { Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(

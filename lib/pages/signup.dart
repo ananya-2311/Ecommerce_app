@@ -132,7 +132,7 @@ class _TeacherSignUpState extends State<TeacherSignUp> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              'Teacher SignUp',
+                              'SignUp',
                               style: GoogleFonts.alice(textStyle: Black20Style),
                             ),
                             TextFormField(
