@@ -7,13 +7,13 @@ import 'package:multiselect_formfield/multiselect_formfield.dart';
 import 'package:shopping_app/db/users.dart';
 import 'package:shopping_app/pages/home.dart';
 
-class TeacherSignUp extends StatefulWidget {
-  TeacherSignUp({Key key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  SignUp({Key key}) : super(key: key);
   @override
-  _TeacherSignUpState createState() => _TeacherSignUpState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _TeacherSignUpState extends State<TeacherSignUp> {
+class _SignUpState extends State<SignUp> {
   final GlobalKey<FormState> _registerFormKey = GlobalKey<FormState>();
   UserServices _userServices = UserServices();
   TextEditingController nameInputController;
