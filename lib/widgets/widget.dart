@@ -2,6 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:shopping_app/widgets/cart.dart';
 import 'package:shopping_app/pages/chatscreen.dart';
 import 'package:shopping_app/widgets/cart_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
+_launchURL() async {
+  const url = 'https://meet.google.com';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 
 Widget appBarMain(BuildContext context){
   // ignore: dead_code
@@ -16,6 +28,9 @@ Widget appBarMain(BuildContext context){
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context)=> new CartScreen()));
           }),
+      new IconButton(icon: Icon(Icons.mobile_screen_share, color: Colors.white),
+          onPressed: _launchURL,
+      ),
       new IconButton(icon: Icon(Icons.voice_chat, color: Colors.white),
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context)=> new Chatscreen()));
