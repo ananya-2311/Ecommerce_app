@@ -38,7 +38,7 @@ class Products with ChangeNotifier {
       price:999,
       size: "M",
       color: "Red",
-      Url: "https://shopping_app.com/red_dress"
+      Url: "https://shopyyy.page.link/red_dress"
     ),
     Product(
       id: '2',
