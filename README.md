@@ -32,6 +32,7 @@ Made this project under Myntra Hackerramp.
 ![image](https://user-images.githubusercontent.com/64389165/118795361-20e05c80-b8b8-11eb-8c0e-f0a14898eba9.png)
 
 # Cart screen
+
 ![image](https://user-images.githubusercontent.com/64389165/118795417-2f2e7880-b8b8-11eb-9266-2eaf1e77246a.png)
 
 
