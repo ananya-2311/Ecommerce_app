@@ -16,8 +16,30 @@ Made this project under Myntra Hackerramp.
 6) We also implemented feature of screen sharing by linking our app to Google meet. Flutter doesn't support screen sharing and has no package for it. But as we had mentioned about screen sharing in our key solutions, we tried our best to implement this feature. 
 
 ## UI:
-
+Login screen
 ![image](https://user-images.githubusercontent.com/64389165/118794829-9697f880-b8b7-11eb-84b9-d8d9f8e527ac.png)
+
+Sign up screen
+![image](https://user-images.githubusercontent.com/64389165/118795011-c7782d80-b8b7-11eb-8225-abdd4cbadff5.png)
+
+Home screen with carousel
+![image](https://user-images.githubusercontent.com/64389165/118795063-d3fc8600-b8b7-11eb-9041-831726be9a45.png)
+
+Categories side scroll bar
+![image](https://user-images.githubusercontent.com/64389165/118795295-12924080-b8b8-11eb-8bd6-5655fb7a1632.png)
+
+Product screen
+![image](https://user-images.githubusercontent.com/64389165/118795361-20e05c80-b8b8-11eb-8c0e-f0a14898eba9.png)
+
+Cart screen
+![image](https://user-images.githubusercontent.com/64389165/118795417-2f2e7880-b8b8-11eb-9266-2eaf1e77246a.png)
+
+
+
+
+
+
+
 
 
 
