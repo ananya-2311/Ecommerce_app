@@ -15,6 +15,10 @@ Made this project under Myntra Hackerramp.
 5) The cart is made fully functional with complete backend integration. Addition and removal of products from cart is possible and is reflected in the database.
 6) We also implemented feature of screen sharing by linking our app to Google meet. Flutter doesn't support screen sharing and has no package for it. But as we had mentioned about screen sharing in our key solutions, we tried our best to implement this feature. 
 
+## UI:
+
+![image](https://user-images.githubusercontent.com/64389165/118794829-9697f880-b8b7-11eb-84b9-d8d9f8e527ac.png)
+
 
 
 
