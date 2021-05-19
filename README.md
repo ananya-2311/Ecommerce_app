@@ -17,7 +17,7 @@ Made this project under Myntra Hackerramp.
 
 ## UI:
 # Login screen
-![image](https://user-images.githubusercontent.com/64389165/118794829-9697f880-b8b7-11eb-84b9-d8d9f8e527ac.png = 250x250)
+![image](https://user-images.githubusercontent.com/64389165/118794829-9697f880-b8b7-11eb-84b9-d8d9f8e527ac.png )
 
 # Sign up screen
 ![image](https://user-images.githubusercontent.com/64389165/118795011-c7782d80-b8b7-11eb-8225-abdd4cbadff5.png)
